@@ -1,4 +1,4 @@
-# Tree Builder server
+# Tree Builder Server
 
 This project was generated with Symfony CLI version v4.12.3.
 
