@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+    tree_api:
+        container_name: tree_api
+        image: thecodingmachine/php:7.3-v3-apache
+        ports:
+            - "8000:80"
+        volumes:
+            - ./:/var/www/html:cached
+        networks:
+            - tree
+        environment:
+            APACHE_DOCUMENT_ROOT: /var/www/html/public
+            PHP_EXTENSION_PDO_SQLITE: 1
+            PHP_EXTENSION_SQLITE: 1
+networks:
+    tree:
