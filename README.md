@@ -1,5 +1,11 @@
 # Tree Builder
-Symfony 5 (Backend) - Angular 8 (Frontend) application
+
+### Application frameworks
+
+Backend - Symfony CLI version v4.12.3
+
+Frontend - Angular CLI version 8.3.23
+
 
 ### Docker
 Tree builder is very easy to install and deploy using a Docker container.
