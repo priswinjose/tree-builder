@@ -126,17 +126,12 @@ class TreeService
      * @param $id
      * @return array
      */
-    public function removeOne($id): array
+    public function removeOne($id)
     {
         $result = $this->tree->find($id);
 
         $this->entityManager->remove($result);
         $this->entityManager->flush();
-
-        return new JsonResponse(
-            null,
-            JsonResponse::HTTP_NO_CONTENT
-        );
     }
 
     /**

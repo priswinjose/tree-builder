@@ -67,14 +67,13 @@ class TreeController extends AbstractController
      */
     public function getAll(): JsonResponse
     {
-        $data = array('text' => '', 'value' => '');
+        $data = array('id' => 0);
 
         $response = $this->treeService->getAll();
 
         $data['children'] = $this->treeService->buildTree($response, $parentId = 0);
-        print_r($data); exit;
 
-        return $this->json($responses);
+        return $this->json($data);
     }
 
     /**
