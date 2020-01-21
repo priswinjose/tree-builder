@@ -1,10 +1,12 @@
-# Tree Builder server
+# Tree Builder Server
 
 This project was generated with Symfony CLI version v4.12.3.
 
 ## Development server
 
 Run `Symfony server:start` in `tree-builder/Server/` folder for a dev server. 
+
+API: 
 
 * View all nodes:
   - Url:`http://localhost:8000/tree`
@@ -43,3 +45,4 @@ Postman scripts available in file: `Server/Tree API.postman_collection.json`
 * PHP 7.3.13 or higher;
 * PDO-SQLite PHP extension enabled;
 * Doctrine ORM [https://symfony.com/doc/current/doctrine.html];
+
