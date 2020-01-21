@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+
+  api:
+    container_name: api
+    build: api
+    volumes:
+      - ./api:/var/www/api
+  client:
+    container_name: client
+    build: client
+    volumes:
+      - ./client:/var/www/client
+    ports:
+      - 4200:4200    
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    links:
+      - api
+    volumes:
+      - ./api:/var/www/api
+      - ./nginx/conf.d/site.conf:/etc/nginx/conf.d/site.conf
+    ports:
+      - 8000:8000    
+volumes:
+  api:
