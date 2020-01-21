@@ -1,0 +1,28 @@
+[
+    {
+      "text": "", "value": "", "children": [
+        {
+          "text": "Tree 1", "value": 1, "children": [{
+            "text": "Level 2", "value": 2, "children": [
+              { "text": "Level 2.1", "value": 4 },
+              { "text": "Level 2.2", "value": 5 }
+            ]
+          }, {
+            "text": "Level 3", "value": 3
+          }]
+        },
+        {
+          "text": "Tree 2", "value": 6, "children": [{
+            "text": "Level 2", "value": 7, "children": [
+              { "text": "Level 2.1", "value": 9 },
+              { "text": "Level 2.2", "value": 10 }
+            ]
+          }, {
+            "text": "Level 3", "value": 8, "children": [
+              { "text": "Level 3.1", "value": 11 }
+            ]
+          }]
+        }
+      ]
+    }
+]

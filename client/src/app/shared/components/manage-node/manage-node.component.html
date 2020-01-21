@@ -1,0 +1,12 @@
+
+<div class="card bg-light mb-3" >
+  <div class="card-header">{{buttonText}} Node</div>
+  <div class="card-body">
+    <div class="row">
+      <input type="text" class="w-100" [(ngModel)]="selectedItemText">
+    </div>
+    <div class="row">
+      <button class="btn btn-primary btn-sm btn-block mt-2" (click)="onButtonClick()">{{buttonText}}</button>
+    </div>
+  </div>
+</div>
