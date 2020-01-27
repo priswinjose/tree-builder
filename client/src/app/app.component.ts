@@ -2,6 +2,7 @@ import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { SelectedItem } from './shared/model/selectedItem';
 import { DashboardService } from './service/dashboard.service';
+import { exists } from 'fs';
 
 @Component({
   selector: 'app-root',
@@ -19,20 +20,31 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.dashboardService.getTreeInfo().subscribe(data => {
-      this.treeData = data[0];
+      this.treeData = data;
     });
   }
 
   updateNode(data) {
-    console.log('UpdateNode', data);
+    this.dashboardService.updateTreeInfo(data, this.selectedItem['value']).subscribe(data => {
+      this.treeData = data;
+    });
   }
 
   addNode(data) {
-    console.log('AddNode', data);
+    this.dashboardService.addTreeInfo(data, this.selectedItem['value']).subscribe(data => {
+      this.treeData = data;
+    });
+  }
+
+  deleteNode(data) { 
+    this.dashboardService.deleteTreeInfo(this.selectedItem['value']).subscribe(data => {
+      this.treeData = data;
+    });
   }
 
   onSelectedNode(item) {
     this.selectedItem = item;
-    console.log(item);
+    // console.log(item);
   }
+  
 }

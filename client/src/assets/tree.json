@@ -1,28 +1,73 @@
 [
-    {
-      "text": "", "value": "", "children": [
+  {
+    "text": "",
+    "value": "",
+    "children": [
         {
-          "text": "Tree 1", "value": 1, "children": [{
-            "text": "Level 2", "value": 2, "children": [
-              { "text": "Level 2.1", "value": 4 },
-              { "text": "Level 2.2", "value": 5 }
+            "text": "Tree 1",
+            "value": 1,
+            "parentId": 0,
+            "children": [
+                {
+                    "text": "Level 2",
+                    "value": 2,
+                    "parentId": 1,
+                    "children": [
+                        {
+                            "text": "Level 2.1",
+                            "value": 4,
+                            "parentId": 2
+                        },
+                        {
+                            "text": "Level 2.2",
+                            "value": 5,
+                            "parentId": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "Level 3",
+                    "value": 3,
+                    "parentId": 1
+                }
             ]
-          }, {
-            "text": "Level 3", "value": 3
-          }]
         },
         {
-          "text": "Tree 2", "value": 6, "children": [{
-            "text": "Level 2", "value": 7, "children": [
-              { "text": "Level 2.1", "value": 9 },
-              { "text": "Level 2.2", "value": 10 }
+            "text": "Tree 2",
+            "value": 6,
+            "parentId": 0,
+            "children": [
+                {
+                    "text": "Level 2",
+                    "value": 7,
+                    "parentId": 6,
+                    "children": [
+                        {
+                            "text": "Level 2.1",
+                            "value": 8,
+                            "parentId": 7,
+                            "children": [
+                                {
+                                    "text": "Level 2.1",
+                                    "value": 11,
+                                    "parentId": 8
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Level 2.2",
+                            "value": 9,
+                            "parentId": 7
+                        }
+                    ]
+                },
+                {
+                    "text": "Level 3",
+                    "value": 10,
+                    "parentId": 6
+                }
             ]
-          }, {
-            "text": "Level 3", "value": 8, "children": [
-              { "text": "Level 3.1", "value": 11 }
-            ]
-          }]
         }
-      ]
-    }
+    ]
+  }
 ]

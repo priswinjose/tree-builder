@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "bootstrap": "^4.4.1",
+    "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^5.3.2",
     "ngx-treeview": "^6.0.2",
     "rxjs": "~6.4.0",

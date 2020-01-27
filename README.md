@@ -49,5 +49,5 @@ docker exec -it api /bin/bash
 Install composer inside the docker machine:
 
 ```sh
-Run composer install inside that terminal
+Run composer install
 ```

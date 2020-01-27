@@ -40,15 +40,15 @@ class TreeService
      * @param int $parentId
      * @return array
      */
-    public function Tree($actionType, $id, string $name, int $parentId): array
+    public function Tree($actionType, $id, string $name, ?int $parentId = null): array
     {
         if ($actionType === 'create') { // Create
             $tree = new MyTree();
+            $tree->setParentid($parentId);
         } else { // Update
             $tree = $this->tree->find($id);
         }
-        $tree->setName($name);
-        $tree->setParentid($parentId);
+        $tree->setName($name);        
 
         $this->entityManager->persist($tree);
         $this->entityManager->flush();
@@ -69,12 +69,11 @@ class TreeService
     /**
      * @param int $id
      * @param string $name
-     * @param int $parentId
      * @return array
      */
-    public function updateOne(int $id, string $name, int $parentId): array
+    public function updateOne(int $id, string $name): array
     {
-        return $this->Tree('update', $id, $name, $parentId);
+        return $this->Tree('update', $id, $name);
     }
 
     /**
@@ -96,17 +95,19 @@ class TreeService
     {
         $tree = array();
 
-        foreach ($elements as &$element) {
+        foreach ($elements as &$element) { //echo "<pre>"; print_r($element); echo "</pre>";
 
             if ($element['parentId'] == $parentId) {
-                $children = $this->buildTree($elements, $element['id']);
+                $children = $this->buildTree($elements, $element['value']);
                 if ($children) {
                     $element['children'] = $children;
                 }
-                $tree[$element['id']] = $element;
+                $tree[] = $element;
                 unset($element);
             }
         }
+
+        //echo "<pre>"; print_r($tree); echo "</pre>";
 
         return $tree;
     }

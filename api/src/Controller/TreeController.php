@@ -48,7 +48,7 @@ class TreeController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", methods={"PUT"})
+     * @Route("/{id}", methods={"PATCH"})
      * @param Request $request
      * @param $id
      * @return JsonResponse
@@ -56,7 +56,7 @@ class TreeController extends AbstractController
     public function update(Request $request, $id): JsonResponse
     {
         $params = $request->request->all();
-        $response = $this->treeService->updateOne($id, $params['name'], $params['parentId']);
+        $response = $this->treeService->updateOne($id, $params['name']);
 
         return $this->json($response);
     }
@@ -67,11 +67,17 @@ class TreeController extends AbstractController
      */
     public function getAll(): JsonResponse
     {
-        $data = array('id' => 0);
-
+        $data = array('text' => 'All', 'value' => '');
+        $newResponse = array();
         $response = $this->treeService->getAll();
+        
+        foreach ($response as $key => $val) { 
+                $newResponse[$key]["text"] = $val["name"];
+                $newResponse[$key]["value"] = $val["id"];
+                $newResponse[$key]["parentId"] = $val["parentId"];
+        }
 
-        $data['children'] = $this->treeService->buildTree($response, $parentId = 0);
+        $data['children'] = $this->treeService->buildTree($newResponse, $parentId = 0);
 
         return $this->json($data);
     }

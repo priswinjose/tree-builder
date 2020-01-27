@@ -7,7 +7,7 @@
     <div class="col-4">
       <app-manage-node buttonText="Update" [data]="selectedItem"  (textChanged)="updateNode($event)"></app-manage-node>
       <app-manage-node buttonText="Add" (textChanged)="addNode($event)"></app-manage-node>
-      <button class="btn btn-primary btn-sm btn-block">Remove</button>
+      <button class="btn btn-primary btn-sm btn-block" (click)="deleteNode($event)">Remove</button>
     </div>
   </div>
 
