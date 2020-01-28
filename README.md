@@ -1,13 +1,13 @@
 # Tree Builder
 
-### Application frameworks
+## Application frameworks
 
 Backend - Symfony CLI version v4.12.3
 
 Frontend - Angular CLI version 8.3.23
 
 
-### Docker
+## Docker
 Tree builder is very easy to install and deploy using a Docker container.
 
 Builds the containers for a service: [https://docs.docker.com/compose/reference/up/]
@@ -59,7 +59,7 @@ docker exec -it client /bin/bash
 ```
 
 
-### Application Urls
+## Application Urls
 
 **Server url:** [http://localhost:8000/tree](http://localhost:8000/tree)
 
@@ -68,7 +68,7 @@ docker exec -it client /bin/bash
 (Use these urls only after docker-compose is completely up and running)
 
 
-### Working
+## Work flow of the application
 
 **Tree listing:**
 * The application will refresh and build trees automatically.
