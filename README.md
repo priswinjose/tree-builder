@@ -71,25 +71,25 @@ docker exec -it client /bin/bash
 ### Working
 
 **Tree listing:**
-    * The application will refresh and build trees automatically.
+* The application will refresh and build trees automatically.
 
 **Create a tree node:**
-    * Without selecting a node from tree listing, input a node name directly in the *Add Node* input textbox.
-    * Click *Add* button to save it.
+* Without selecting a node from tree listing, input a node name directly in the *Add Node* input textbox.
+* Click *Add* button to save it.
 
 **Create one child node:**
-    * Select one node by clicking a node in the tree listing. 
-    * The selected node will be shown in the *Update node* input textbox.
-    * Input a node name into the *Add Node* input textbox.
-    * Click *Add* button to save it. 
+* Select one node by clicking a node in the tree listing. 
+* The selected node will be shown in the *Update node* input textbox.
+* Input a node name into the *Add Node* input textbox.
+* Click *Add* button to save it. 
 
 **Update one node:**
-    * Select one node by clicking a node in the tree listing. 
-    * The selected node will be shown in the *Update node* input textbox.
-    * Change the node name in the *Update Node* input textbox.
-    * Click *Update* button to change it.
+* Select one node by clicking a node in the tree listing. 
+* The selected node will be shown in the *Update node* input textbox.
+* Change the node name in the *Update Node* input textbox.
+* Click *Update* button to change it.
 
 **Remove one node:**
-    * Select one node by clicking a node in the tree listing. 
-    * The selected node will be shown in the *Update node* input textbox.
-    * Click *Remove* button to delete it.
+* Select one node by clicking a node in the tree listing. 
+* The selected node will be shown in the *Update node* input textbox.
+* Click *Remove* button to delete it.
