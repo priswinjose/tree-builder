@@ -61,35 +61,35 @@ docker exec -it client /bin/bash
 
 ### Application Urls
 
-Server url: [http://localhost:8000/tree]
+**Server url:** [http://localhost:8000/tree](http://localhost:8000/tree)
 
-Client url: [http://localhost:4200/]
+**Client url:** [http://localhost:4200/](http://localhost:4200/)
 
 (Use these urls only after docker-compose is completely up and running)
 
 
 ### Working
 
-Tree listing:
-    - The application will refresh and build trees automatically.
+**Tree listing:**
+    * The application will refresh and build trees automatically.
 
-Create a tree node:
-    - Without selecting a node from tree listing, input a node name directly in the 'Add Node' input textbox.
-    - Click 'Add' button to save it.
+**Create a tree node:**
+    * Without selecting a node from tree listing, input a node name directly in the *Add Node* input textbox.
+    * Click *Add* button to save it.
 
-Create one child node:
-    - Select one node by clicking a node in the tree listing. 
-    - The selected node will be shown in the 'Update node' input textbox.
-    - Input a node name into the 'Add Node' input textbox.
-    - Click 'Add' button to save it. 
+**Create one child node:**
+    * Select one node by clicking a node in the tree listing. 
+    * The selected node will be shown in the *Update node* input textbox.
+    * Input a node name into the *Add Node* input textbox.
+    * Click *Add* button to save it. 
 
-Update one node:
-    - Select one node by clicking a node in the tree listing. 
-    - The selected node will be shown in the 'Update node' input textbox.
-    - Change the node name in the 'Update Node' input textbox.
-    - Click 'Update' button to change it.
+**Update one node:**
+    * Select one node by clicking a node in the tree listing. 
+    * The selected node will be shown in the *Update node* input textbox.
+    * Change the node name in the *Update Node* input textbox.
+    * Click *Update* button to change it.
 
-Remove one node:
-    - Select one node by clicking a node in the tree listing. 
-    - The selected node will be shown in the 'Update node' input textbox.
-    - Click 'Remove' button to delete it.
+**Remove one node:**
+    * Select one node by clicking a node in the tree listing. 
+    * The selected node will be shown in the *Update node* input textbox.
+    * Click *Remove* button to delete it.
