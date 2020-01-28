@@ -14,7 +14,7 @@ export class TreeComponent {
     hasFilter: false,
     hasCollapseExpand: true,
     decoupleChildFromParent: false,
-    maxHeight: 500
+    //maxHeight: 800
   };
 
   @Input('treeData')
@@ -23,6 +23,10 @@ export class TreeComponent {
     this.items = this.getdata();
   }
 
+  @Input('treeDatas')
+  set treeDatas(data) {
+  }
+  
   @Output() selectedNode = new EventEmitter();
   items: TreeviewItem[];
   treeDataSet: any;

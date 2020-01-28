@@ -42,7 +42,14 @@ class TreeController extends AbstractController
     public function create(Request $request): JsonResponse
     {
         $params = $request->request->all();
-        $response = $this->treeService->createOne($params['name'], $params['parentId']);
+        
+        if($params['parentId'] != '') {
+            $parentId = $params['parentId'];
+        } else {
+            $parentId = 0;
+        }
+
+        $response = $this->treeService->createOne($params['name'], $parentId);
 
         return $this->json($response);
     }

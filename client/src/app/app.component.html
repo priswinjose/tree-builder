@@ -2,12 +2,13 @@
 <div class="container">
   <div class="row">
     <div class="col-8">
-      <app-tree [treeData]="treeData" (selectedNode)="onSelectedNode($event)"></app-tree>
+      <app-tree [treeData]="treeData" [treeDatas]="treeDatas" (selectedNode)="onSelectedNode($event)"></app-tree>
     </div>
     <div class="col-4">
-      <app-manage-node buttonText="Update" [data]="selectedItem"  (textChanged)="updateNode($event)"></app-manage-node>
+      <app-manage-node buttonText="Update" [data]="selectedItem" (textChanged)="updateNode($event)"></app-manage-node>
       <app-manage-node buttonText="Add" (textChanged)="addNode($event)"></app-manage-node>
       <button class="btn btn-primary btn-sm btn-block" (click)="deleteNode($event)">Remove</button>
+      <span [ngClass]="displayText">* Please select a node to continue!!</span>
     </div>
   </div>
 

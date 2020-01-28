@@ -95,7 +95,7 @@ class TreeService
     {
         $tree = array();
 
-        foreach ($elements as &$element) { //echo "<pre>"; print_r($element); echo "</pre>";
+        foreach ($elements as &$element) {
 
             if ($element['parentId'] == $parentId) {
                 $children = $this->buildTree($elements, $element['value']);
@@ -106,9 +106,7 @@ class TreeService
                 unset($element);
             }
         }
-
-        //echo "<pre>"; print_r($tree); echo "</pre>";
-
+        
         return $tree;
     }
 
