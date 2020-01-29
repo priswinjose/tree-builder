@@ -59,16 +59,16 @@ docker exec -it client /bin/bash
 ```
 
 
-## Application Urls
+## Urls
 
-**Server url:** [http://localhost:8000/tree](http://localhost:8000/tree)
+**Server:** [http://localhost:8000/tree](http://localhost:8000/tree)
 
-**Client url:** [http://localhost:4200/](http://localhost:4200/)
+**Client:** [http://localhost:4200/](http://localhost:4200/)
 
 (Use these urls only after docker-compose is completely up and running)
 
 
-## Work flow of the application
+## Work flow
 
 **Tree listing:**
 * The application will refresh and build trees automatically.
