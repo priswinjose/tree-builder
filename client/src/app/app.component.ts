@@ -2,7 +2,7 @@ import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { SelectedItem } from './shared/model/selectedItem';
 import { DashboardService } from './service/dashboard.service';
-import { exists } from 'fs';
+//import { exists } from 'fs';
 
 @Component({
   selector: 'app-root',
