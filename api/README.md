@@ -21,7 +21,7 @@ API:
   
 * Update a node
   - Url: `http://localhost:8000/tree/{id}`
-  - @Route("/{id}", methods={"PUT"})
+  - @Route("/{id}", methods={"PATCH"})
   - @param Request $request
   - @param $id
   - @return JsonResponse
